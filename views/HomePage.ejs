@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+        <%- include('partial/SideBar');%>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    داشبرد
+                    <small>کنترل پنل</small>
+
+                </h1>
+
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> خانه</a></li>
+                    <li class="active">داشبرد</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-aqua">
+                            <div class="inner">
+                                <h3>150</h3>
+
+                                <p>تعداد اعضاء</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-bag"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-green">
+                            <div class="inner">
+                                <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                                <p>درصد اعضاء حاضر در باشگاه</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-yellow">
+                            <div class="inner">
+                                <h3>44</h3>
+
+                                <p>کاربران ثبت شده</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-person-add"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-xs-6">
+                        <!-- small box -->
+                        <div class="small-box bg-red">
+                            <div class="inner">
+                                <h3>0</h3>
+
+                                <p>موجودی صندوق</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-pie-graph"></i>
+                            </div>
+                         
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="message-holder">
+                            <p id="message"></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="box" style="height: 357px;">
+                            <div class="box-body">
+                                <div class="row" style="margin-top: 20px;">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-8">
+                                        <div id="scan-border"></div>
+                                        <video width="250px" height="250px" id="preview"></video>
+                                    </div>
+                                    <div class="col-sm-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="box box-primary" id="card-container" style="display: none;">
+                            <div class="box-header">
+                                <h1 class="box-title">اطلاعات هویتی</h1>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">نام و نام خانوادگی :</label>
+                                            <div class="col-sm-8">
+                                                <label id="fullname"></label>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">شماره عضویت :</label>
+                                            <div class="col-sm-8">
+                                                <label id="member-id"></label>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">تاریخ شروع دوره :</label>
+                                            <div class="col-sm-8">
+                                                <label id="start-date"></label>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">تاریخ پایان دوره :</label>
+                                            <div class="col-sm-8">
+                                                <label id="expire-date"></label>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-4">تعداد جلسات باقی مانده :</label>
+                                            <div class="col-sm-8">
+                                                <label id="sessions-number"></label>
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+
+
+                <!-- /.row (main row) -->
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer text-left">
+
+        </footer>
+
+
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <script src="./assets/dist/js/instascan.min.js"></script>
+
+    <!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script> -->
+    <script src="../assets/dist/js/axioscalls.js"></script>
+
+    <script src="./assets/dist/js/custom.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+    <div class="wrapper">
+        <%- include('partial/SideBar');%>
+        <div class="content-wrapper">
+
+
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <ol class="breadcrumb" style="color: white;height: 35px;background-color: #4a4747; margin: 10px;">
+                        <li>
+                            <p>ایجاد عضویت <i class="fa fa-user-plus"></i></p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <br>
+
+            <section class="content">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h1 class="box-title">ورود اطلاعات</h1>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4">نام</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="firstname" name="firstname">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4">نام خانوادگی</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="lastname" name="lastname">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-sm-4">شماره تماس ثابت</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="tell" placeholder="موبایل-ثابت"
+                                            name="tell">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-sm-4">شماره موبایل</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="mobile" placeholder="موبایل-ثابت"
+                                            name="mobile">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-sm-4">آدرس</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="address">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4">رشته ورزشی</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="sportType">
+                                            <option value="1">بوکس و رزمی</option>
+                                            <option value="2">بدنسازی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-sm-4">انتخاب دوره زمانی</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="sessions_number" name="sessions_number">
+                                            <option value="30">یک ماه هر روز</option>
+                                            <option value="12">یک ماه ۱۲ جلسه</option>
+                                            <option value="16">یک ماه ۱۶ جلسه</option>
+                                            <option value="24">یک ماه ۲۴ جلسه</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-sm-4">تاریخ ثبتنام</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control pdp-dark" id="register-date">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <div class="col-sm-10"></div>
+                                    <div class="col-sm-2">
+                                        <button type="button" class="btn btn-info"
+                                            onclick="createUser()">ثبتنام</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <br>
+
+
+
+                <div class="row" id="user-container" style="display: none;">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4" id="card">
+                        <div class="print-card-box">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-5">نام :</label>
+                                        <label class="control-label col-sm-7" id="card-fname"></label>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-5">شماره عضویت :</label>
+                                        <label class="control-label col-sm-7" id="member-id"></label>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-5">تاریخ عضویت :</label>
+                                        <label class="control-label col-sm-7" id="create-date"></label>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-5">رشته ورزشی :</label>
+                                        <label class="control-label col-sm-7" id="sport-type"></label>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-sm-4" style="padding: 0;">
+                                    <div class="col-sm-12" id="qrcode"></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn" onclick="printElement(document.getElementById('card'))">پرینت کارت</button>
+                    </div>
+                </div>
+
+
+            </section>
+
+        </div>
+    </div>
+    <script src="./assets/dist/js/qrcode.js"></script>
+    <script src="./assets/dist/js/custom.js"></script>
+    <script src="./assets/dist/js/axioscalls.js"></script>
+    <script src="./assets/dist/js/persianDatepicker.min.js"></script>
+    <script>
+        document.getElementById('register-date').addEventListener('focus', function () {
+            $("#register-date").persianDatepicker();
+        })
+    </script>
+
+
+</body>
+
+</html>
